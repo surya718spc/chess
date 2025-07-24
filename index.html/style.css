@@ -1,0 +1,149 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #333;
+    color: #fff;
+    margin: 0;
+    body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #333;
+    color: #fff;
+    margin: 0;
+}
+
+#game-container {
+    text-align: center;
+}
+
+#status-display {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 15px;
+    height: 30px;
+}
+
+#chess-board {
+    display: grid;
+    grid-template-columns: repeat(8, 65px);
+    grid-template-rows: repeat(8, 65px);
+    width: 520px;
+    height: 520px;
+    border: 5px solid #6b4b39;
+}
+
+.square {
+    width: 65px;
+    height: 65px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 50px;
+    user-select: none;
+    position: relative; /* Needed for the pseudo-element below */
+}
+
+.square.light {
+    background-color: #f0d9b5;
+}
+
+.square.dark {
+    background-color: #b58863;
+}
+
+.piece {
+    cursor: grab;
+    text-shadow: 0 0 3px rgba(0,0,0,0.5);
+    /* Make piece immune to pointer events so we click the square */
+    pointer-events: none; 
+}
+
+.piece-white {
+    color: #ffffff;
+}
+
+.piece-black {
+    color: #000000;
+}
+
+.selected {
+    background-color: #6a994e !important;
+}
+
+/* New style for showing possible moves */
+.possible-move::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 25px;
+    height: 25px;
+    background-color: rgba(0, 0, 0, 0.25);
+    border-radius: 50%;
+}
+}
+
+#game-container {
+    text-align: center;
+}
+
+#status-display {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 15px;
+    height: 30px;
+}
+
+#chess-board {
+    display: grid;
+    grid-template-columns: repeat(8, 65px);
+    grid-template-rows: repeat(8, 65px);
+    width: 520px;
+    height: 520px;
+    border: 5px solid #6b4b39;
+}
+
+.square {
+    width: 65px;
+    height: 65px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 50px;
+    user-select: none;
+}
+
+.square.light {
+    background-color: #f0d9b5;
+}
+
+.square.dark {
+    background-color: #b58863;
+}
+
+.piece {
+    cursor: grab;
+    /* Add text-shadow for better visibility on all squares */
+    text-shadow: 0 0 3px rgba(0,0,0,0.5);
+}
+
+.piece-white {
+    color: #ffffff;
+}
+
+.piece-black {
+    color: #000000;
+}
+
+.selected {
+    background-color: #6a994e !important; /* Highlight selected square */
+}
